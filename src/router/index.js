@@ -9,14 +9,15 @@ const routes = [
   },
   {
     path: "/about",
-    name: "about",
+    name: "About",
     component: function () {
       return import("../views/AboutView.vue");
     },
   },
   {
-    path: "/event/5928101",
+    path: "/event/:id",
     name: "EventDetails",
+    props: true,
     component: function () {
       return import("../views/EventDetails.vue");
     },
